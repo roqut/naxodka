@@ -1,13 +1,16 @@
 [app]
 
 # (str) Title of your application
-title = naxodka
+title = NAXODKA
 
 # (str) Package name
 package.name = naxodka
 
-# (str) Package domain (needed for android/ios packaging)
-package.domain = org.naxodka
+# (str) Version of your application
+version = 1.0
+
+# (str) Main module name.
+main = APP
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,ogg,ttf
@@ -18,20 +21,11 @@ source.include_patterns = images/*.png, scr_AdminMain.py, scr_ChooseOrg.py, scr_
 # (str) Source code where the main.py live
 source.dir = .
 
-# (str) Application versioning (method 1)
-version = 0.1
-
-# (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,psycopg2,base64,PIL,webbrowser
-
-# (list) Supported orientations
-# Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
+# (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
-
-#
-# Android specific
-#
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
+
+# (list) Permissions
+android.permissions = INTERNET
